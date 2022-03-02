@@ -23,12 +23,9 @@ function parseSearch(text) {
 
 function search(e) {
 	e.preventDefault()
-  fetch(`http://localhost:3000/${parseSearch(searchBox.value)}`)
-    .then(resp => { 
-      return resp.json();
-    })
-		.then(data => window.sessionStorage.setItem("results", JSON.stringify(data)))
-		.then(document.location.href = "./results.html");
+  //let str = `http://localhost:3000/${parseSearch(searchBox.value)}`;
+	const results = localStorage.setItem("search", `http://localhost:3000/${parseSearch(searchBox.value)}`);
+  document.location.href = "./results.html"
 }
 
 function lucky(e) {
