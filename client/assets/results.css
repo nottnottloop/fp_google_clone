@@ -8,6 +8,7 @@ body {
 	background-size: 100vw 100vh;
 	background-repeat: repeat-y;
 	font-family: 'Smooch Sans', sans-serif;
+	margin: 0;
 }
 
 .amongus {
@@ -32,8 +33,9 @@ h3 {
 }
 
 #resultscontents {
-	transform: translate(-8px, 100px);
+	transform: translate(0, 100px);
 	background-color: rgba(206, 206, 206, 0.651);
+	width: 100%;
 }
 
 a {
@@ -41,7 +43,7 @@ a {
 }
 
 h1 a{
-	display: block;
+	display: inline;
 
 }
 

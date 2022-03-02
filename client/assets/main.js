@@ -13,7 +13,6 @@ const searchButton = document.querySelector("#mainpagesearch");
 const luckyButton = document.querySelector("#mainpagelucky");
 const searchBox = document.querySelector("#mainpageinput")
 
-//amongus.addEventListener('click', document.location.href = "./index.html");
 searchButton.addEventListener('click', search);
 luckyButton.addEventListener('click', lucky);
 
@@ -23,16 +22,13 @@ function parseSearch(text) {
 
 function search(e) {
 	e.preventDefault()
-  //let str = `http://localhost:3000/${parseSearch(searchBox.value)}`;
-	const results = localStorage.setItem("search", `http://localhost:3000/${parseSearch(searchBox.value)}`);
+	localStorage.setItem("search", `http://localhost:3000/${parseSearch(searchBox.value)}`);
   document.location.href = "./results.html"
 }
 
 function lucky(e) {
 	e.preventDefault()
   fetch(`http://localhost:3000/${parseSearch(searchBox.value)}`)
-    .then(resp => { 
-      return resp.json();
-    })
+    .then(resp => resp.json())
 		.then(data => document.location.href = data[0].url);
 }
