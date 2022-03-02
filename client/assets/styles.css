@@ -3,6 +3,50 @@
 	box-sizing: border-box;
 }
 
+.navbar {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar-container {
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	z-index: 1;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.navbar-menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.navbar-links {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 125px;
+	text-decoration: none;
+	height: 100%;
+	transition: all 0.3s ease;
+  }
+
+  .navbar-links:hover {
+	color: #fff;
+	transition: all 0.3s ease;
+	text-decoration: underline;
+  }
+
 body {
 	background-image: url("bg.jpg");
 	background-size: 100vw 100vh;
