@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
 			res.send(JSON.stringify(results[req.params.id]));
 		} else {
 			res.status(404);
-			res.send({title: "404!", desc: "Oops, you searched something that doesn't exist! Yup definitely doesn't exist", url: ""});
+			res.send(JSON.stringify([{title: "404!", desc: "Oops, you searched something that doesn't exist! Yup definitely doesn't exist", url: ""}]));
 		}
 });
 
