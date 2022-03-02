@@ -32,7 +32,7 @@ h3 {
 }
 
 #resultscontents {
-	transform: translate(50px, 100px);
+	transform: translate(-10px, 100px);
 	background-color: rgba(206, 206, 206, 0.651);
 }
 
