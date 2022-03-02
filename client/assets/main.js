@@ -15,10 +15,25 @@ const searchBox = document.querySelector("#mainpageinput")
 searchButton.addEventListener('click', search);
 luckyButton.addEventListener('click', lucky);
 
-function search() {
-	console.log(searchBox.value);
+function parseSearch(text) {
+		return text.replaceAll(' ', '_');
 }
 
-function lucky() {
-	console.log('asrtarts')
+function search(e) {
+	e.preventDefault()
+  fetch(`http://localhost:3000/${parseSearch(searchBox.value)}`)
+    .then(resp => { 
+      return resp.json();
+    })
+		.then(data => window.sessionStorage.setItem("results", JSON.stringify(data)))
+		.then(document.location.href = "./results.html");
+}
+
+function lucky(e) {
+	e.preventDefault()
+  fetch(`http://localhost:3000/${parseSearch(searchBox.value)}`)
+    .then(resp => { 
+      return resp.json();
+    })
+		.then(data => document.location.href = data[0].url);
 }

@@ -50,6 +50,6 @@ const fruits = [
 	{title: "Watermelon", desc: "Full of water. Can be very sweet, can be very underwhelming", url: "https://en.wikipedia.org/wiki/Watermelon"},
 ]
 
-const results = {games: games, programmingConcepts: programmingConcepts, colors: colors, fruits: fruits};
+const results = {games: games, programming_concepts: programmingConcepts, colors: colors, fruits: fruits};
 
 module.exports = results;
