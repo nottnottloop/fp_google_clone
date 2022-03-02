@@ -6,7 +6,7 @@
 body {
 	background-image: url("bg.jpg");
 	background-size: 100vw 100vh;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	font-family: 'Smooch Sans', sans-serif;
 }
 
@@ -29,6 +29,20 @@ table {
 
 h3 {
 	display: inline;
+}
+
+#resultscontents {
+	transform: translate(50px, 100px);
+	background-color: rgba(206, 206, 206, 0.651);
+}
+
+a {
+	color: white;
+}
+
+h1 a{
+	display: block;
+
 }
 
 #mainpagesearchbox {

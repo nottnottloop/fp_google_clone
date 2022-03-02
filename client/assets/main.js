@@ -8,10 +8,12 @@ for (let i = 0; i < text.length; i++) {
 }
 title.innerHTML = newText.join('');
 
+const amongus = document.querySelector("#amongusresults");
 const searchButton = document.querySelector("#mainpagesearch");
 const luckyButton = document.querySelector("#mainpagelucky");
 const searchBox = document.querySelector("#mainpageinput")
 
+//amongus.addEventListener('click', document.location.href = "./index.html");
 searchButton.addEventListener('click', search);
 luckyButton.addEventListener('click', lucky);
 

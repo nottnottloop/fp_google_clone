@@ -15,10 +15,6 @@ body {
 	transform: translate(-20px, 20px);
 }
 
-main {
-	position: relative;
-}
-
 #mainpagesearchbox {
 	text-align: center;
 	padding: 20px 80px 20px 80px;
