@@ -5,7 +5,8 @@ const results = require("./results");
 
 router.get('/', (req, res) => {
 		res.set('Content-Type', 'application/json');
-		res.send(JSON.stringify(results, null, 2));
+		res.status(404);
+		res.send(JSON.stringify([{title: "404!", desc: "Oops, you searched something that doesn't exist! Yup definitely doesn't exist", url: ""}]));
 });
 
 router.get('/:id', (req, res) => {
