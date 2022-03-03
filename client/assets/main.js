@@ -12,6 +12,8 @@ const amongus = document.querySelector("#amongusresults");
 const searchButton = document.querySelector("#mainpagesearch");
 const luckyButton = document.querySelector("#mainpagelucky");
 const searchBox = document.querySelector("#mainpageinput")
+const protocol = window.location.protocol;
+const host = window.location.host;
 
 searchButton.addEventListener('click', search);
 luckyButton.addEventListener('click', lucky);
@@ -22,13 +24,13 @@ function parseSearch(text) {
 
 function search(e) {
 	e.preventDefault()
-	localStorage.setItem("search", `http://localhost:3000/${parseSearch(searchBox.value)}`);
+	localStorage.setItem("search", `${protocol}//${host}/${parseSearch(searchBox.value)}`);
   document.location.href = "./results.html"
 }
 
 function lucky(e) {
 	e.preventDefault()
-  fetch(`http://localhost:3000/${parseSearch(searchBox.value)}`)
+  fetch(`${protocol}//${host}/${parseSearch(searchBox.value)}`)
     .then(resp => resp.json())
 		.then(data => document.location.href = data[0].url);
 }
